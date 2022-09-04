@@ -14,7 +14,8 @@ void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($" {array[i]} ");
+        if (array[i] == string.Empty) i++;
+        else Console.Write($"{array[i]} ");
     }
 }
 Console.Clear();
